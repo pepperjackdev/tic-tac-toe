@@ -1,15 +1,11 @@
+@import "constants.css";
+
 @font-face {
     font-family: "IBM Plex Mono";
     src: url("../font/IBMPlexMono-Regular.ttf");
 }
 
 * {
-    /* Colors Declaration */
-    primary: #03045e;
-    secondary: rgba(71, 71, 155, 0.14);
-    background: #e7e7fd;
-
-    /* Setting the default font */
     -fx-font-family: "IBM Plex Mono";
 }
 
@@ -37,47 +33,23 @@
 
 .button {
     -fx-background-radius: 30px;
-    -fx-background-color: secondary;
+    -fx-background-color: highlighted;
 }
 
 .button:hover {
-    -fx-background-color: #03045e;
+    -fx-background-color: primary;
 }
 
 #titleBar #closeButton:hover {
     -fx-background-color: #c1121f;
 }
 
-#titleBar #iconizeButton:hover {
-    -fx-background-color: #03045e;
+#mainPane {
+    -fx-background-color: background;
+    -fx-background-radius: 0px 0px 20px 20px;
 }
 
 #mainPane .box {
-    -fx-background-color: secondary;
+    -fx-background-color: highlighted;
     -fx-background-radius: 10px;
-}
-
-.controls .right_button {
-    -fx-background-color: secondary;
-    -fx-background-radius: 0px 10px 10px 0px;
-}
-
-.controls .left_button {
-    -fx-background-color: secondary;
-    -fx-background-radius: 10px 0px 0px 10px;
-}
-
-.controls .right_button .label,
-.controls .left_button .label {
-    -fx-text-fill: primary;
-}
-
-.controls .left_button:hover,
-.controls .right_button:hover {
-    -fx-background-color: primary;
-}
-
-.controls .left_button:hover .label,
-.controls .right_button:hover .label {
-    -fx-text-fill: white;
 }

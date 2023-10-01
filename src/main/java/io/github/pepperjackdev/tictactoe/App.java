@@ -17,12 +17,13 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         App.stage = stage;
 
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("game.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("mainView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        stage.setTitle("Tic Tac Toe | Developed by PepperJackDev");
+        stage.setTitle("Tic Tac Toe");
         stage.initStyle(StageStyle.TRANSPARENT);
         scene.setFill(Color.TRANSPARENT);
+        stage.setResizable(false);
         stage.setScene(scene);
 
         stage.show();
