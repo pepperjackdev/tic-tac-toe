@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<Pane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.pepperjackdev.tictactoe.GameViewController">
    <children>
       <Pane fx:id="boxesPane" layoutX="123.0" layoutY="96.0">
          <children>
-            <StackPane prefHeight="100.0" prefWidth="100.0" styleClass="box" />
-            <StackPane layoutX="130.0" prefHeight="100.0" prefWidth="100.0" styleClass="box" />
-            <StackPane layoutX="260.0" prefHeight="100.0" prefWidth="100.0" styleClass="box" />
-            <StackPane layoutY="129.0" prefHeight="100.0" prefWidth="100.0" styleClass="box" />
-            <StackPane layoutX="130.0" layoutY="129.0" prefHeight="100.0" prefWidth="100.0" styleClass="box" />
-            <StackPane layoutX="260.0" layoutY="129.0" prefHeight="100.0" prefWidth="100.0" styleClass="box" />
-            <StackPane layoutY="257.0" prefHeight="100.0" prefWidth="100.0" styleClass="box" />
-            <StackPane layoutX="130.0" layoutY="257.0" prefHeight="100.0" prefWidth="100.0" styleClass="box" />
-            <StackPane layoutX="260.0" layoutY="257.0" prefHeight="100.0" prefWidth="100.0" styleClass="box" />
+            <StackPane prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
+            <StackPane layoutX="130.0" prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
+            <StackPane layoutX="260.0" prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
+            <StackPane layoutY="129.0" prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
+            <StackPane layoutX="130.0" layoutY="129.0" prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
+            <StackPane layoutX="260.0" layoutY="129.0" prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
+            <StackPane layoutY="257.0" prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
+            <StackPane layoutX="130.0" layoutY="257.0" prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
+            <StackPane layoutX="260.0" layoutY="257.0" prefHeight="100.0" prefWidth="100.0" styleClass="box">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children></StackPane>
          </children>
       </Pane>
       <Label alignment="CENTER" layoutX="200.0" layoutY="549.0" prefHeight="17.0" prefWidth="205.0" styleClass="link" text="Developed by @pepperjackdev" />
       <Label alignment="CENTER" layoutX="135.0" layoutY="566.0" prefHeight="17.0" prefWidth="335.0" styleClass="link" text="Version: alpha 0.0.0.0 (jdk-20)" />
+      <Button layoutX="24.0" layoutY="551.0" mnemonicParsing="false" onAction="#clean" prefHeight="30.0" prefWidth="30.0" />
    </children>
 </Pane>

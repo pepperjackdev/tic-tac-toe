@@ -34,7 +34,7 @@ public class MainViewController {
         closeButton.setOnAction(e -> App.stage.close());
         iconizeButton.setOnAction(e -> App.stage.setIconified(true));
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("gameView.fxml"));
+        FXMLLoader loader = new FXMLLoader(MainViewController.class.getResource("gameView.fxml"));
         Pane pane = loader.load();
 
         mainFrame.getChildren().add(pane);

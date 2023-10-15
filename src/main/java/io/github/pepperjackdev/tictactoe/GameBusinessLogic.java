@@ -1,10 +1,16 @@
 package io.github.pepperjackdev.tictactoe;
 
 public class GameBusinessLogic {
-    PlaceableEntity entityToPlace;
+
+    private PlaceableEntity entityToPlace;
+    private final static PlaceableEntity DEFAULT_ENTITY_TO_PLACE_AS_FIRST = PlaceableEntity.CROSS;
 
     public GameBusinessLogic() {
-        this.entityToPlace = PlaceableEntity.CROSS;
+        entityToPlace = PlaceableEntity.CROSS;
+    }
+
+    public void loadDefaultToPlaceEntity() {
+        entityToPlace = DEFAULT_ENTITY_TO_PLACE_AS_FIRST;
     }
 
     public PlaceableEntity getEntityToPlace() {
