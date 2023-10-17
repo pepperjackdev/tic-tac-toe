@@ -6,7 +6,7 @@ public class GameBusinessLogic {
     private final static PlaceableEntity DEFAULT_ENTITY_TO_PLACE_AS_FIRST = PlaceableEntity.CROSS;
 
     public GameBusinessLogic() {
-        entityToPlace = PlaceableEntity.CROSS;
+        entityToPlace = DEFAULT_ENTITY_TO_PLACE_AS_FIRST;
     }
 
     public void loadDefaultToPlaceEntity() {
