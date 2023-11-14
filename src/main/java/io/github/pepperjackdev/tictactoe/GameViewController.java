@@ -48,15 +48,26 @@ public class GameViewController {
 
     private void place(int index) { // Where I have to put the new entity? (-> Index).
         if (map[index] == null) {
-            map[index] = logic.getEntityToPlace();
+            PlaceableEntity entityToPlace = logic.getEntityToPlace();
+            map[index] = entityToPlace;
+
+            int[] winner = null;
+            if ((winner = logic.searchForWinner(map)) != null) {
+                Arrays.fill(map, null);
+                for (int i : winner) {
+                    map[i] = entityToPlace;
+                }
+            }
+
             loadMapToBoxesPane();
         }
+
     }
 
     @FXML
     private void clean() {
         Arrays.fill(map, null);
-        logic.loadDefaultToPlaceEntity();
+        logic.loadDefaultEntityToPlace();
         loadMapToBoxesPane();
     }
 
