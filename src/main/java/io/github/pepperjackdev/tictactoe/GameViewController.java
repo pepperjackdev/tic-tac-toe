@@ -51,10 +51,10 @@ public class GameViewController {
             PlaceableEntity entityToPlace = logic.getEntityToPlace();
             map[index] = entityToPlace;
 
-            int[] winner = null;
-            if ((winner = logic.searchForWinner(map)) != null) {
+            int[] winnerIndexes;
+            if ((winnerIndexes = logic.searchForWinner(map)) != null) {
                 Arrays.fill(map, null);
-                for (int i : winner) {
+                for (int i : winnerIndexes) {
                     map[i] = entityToPlace;
                 }
             }
