@@ -23,6 +23,9 @@ public class GameViewController {
     /* The Game-Map */
     private PlaceableEntity[] map;
 
+    /* Winner displayed */
+    boolean isWinnerDisplayed = false;
+
     @FXML void initialize() {
 
         boxes = new ArrayList<>();
@@ -47,12 +50,14 @@ public class GameViewController {
     }
 
     private void place(int index) { // Where I have to put the new entity? (-> Index).
-        if (map[index] == null) {
+
+        if (map[index] == null && !isWinnerDisplayed) {
             PlaceableEntity entityToPlace = logic.getEntityToPlace();
             map[index] = entityToPlace;
 
             int[] winnerIndexes;
             if ((winnerIndexes = logic.searchForWinner(map)) != null) {
+                isWinnerDisplayed = true;
                 Arrays.fill(map, null);
                 for (int i : winnerIndexes) {
                     map[i] = entityToPlace;
@@ -66,6 +71,7 @@ public class GameViewController {
 
     @FXML
     private void clean() {
+        isWinnerDisplayed = false;
         Arrays.fill(map, null);
         logic.loadDefaultEntityToPlace();
         loadMapToBoxesPane();
